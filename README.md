@@ -1,2 +1,2 @@
 online-zoo .
-https://github.com/KatsiarynaKarneliuk/online-zoo/pages/main
+https://katsiarynakarneliuk.github.io/online-zoo/pages/main/
