@@ -1,0 +1,284 @@
+@font-face {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+
+    src: local("Roboto"),
+         url("/fonts/roboto.woff2") format("woff2"),
+         url("/fonts/roboto.woff") format("woff");
+  }
+
+  @font-face {
+    font-family: "Roboto";
+    font-style: medium;
+    font-weight: 500;
+
+    src: local("Roboto"),
+         url("/fonts/roboto.woff2") format("woff2"),
+         url("/fonts/roboto.woff") format("woff");
+  }
+
+  @font-face {
+    font-family: "Roboto";
+    font-style: bold;
+    font-weight: 700;
+
+    src: local("Roboto"),
+         url("/fonts/roboto.woff2") format("woff2"),
+         url("/fonts/roboto.woff") format("woff");
+  }
+
+  html{
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: "Roboto", "Arial", sans-serif;
+    margin:0%;
+  }
+
+  .section1{
+    background-image: url("../../assets/images/section1/6c4379c95b7fac4756f94f501e2105b7.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 1000px;
+  }
+  .header{
+    width: 100vw;
+    height: 100px;
+    background-color: #000000;
+
+  }
+  .menu{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 1%;
+  }
+
+  a:hover{
+    color: #FE9013;
+  }
+
+  .nav-item{
+    color:#FFFFFF;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+    vertical-align:middle;
+    margin: 0 2%;
+  }
+
+  .logo{
+    color: #FFFFFF;
+    font-family: Roboto;
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: center;   
+  }
+
+  .logo_reg{
+    position: relative;
+    display: inline-block;
+    width: 82px;
+    height: 52px;
+    border: 1px solid #FFFFFF;
+    border-radius: 2px;
+    margin-left: 15%;
+  }
+
+  .logo_reg:hover{
+    border-color: #F9804B;
+  }
+
+  .desined{
+    position: relative;
+    display: inline-block;
+    left: 30%;
+    color: #FFFFFF;
+    font-family: Roboto;
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: 0em;
+
+  }
+
+  main{
+    height: 1482px;
+    left: 0px;
+    right: 0px;
+    top: 466px;
+    background: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #FEBDAB 100.95%, rgba(254, 210, 144, 0.7) 106.36%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
+  }
+  
+  .pick_and_feed{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    width:80%;
+    padding: 3% 3% 3% 3%;
+  }
+
+  .pick_header{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 130%;
+    color: #FFFFFF; 
+  }
+
+  .pick_header > p {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    /* or 22px */
+
+
+    color: #FFFFFF;
+    margin:0;
+  }
+
+  .next_header>p{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 130%;
+    /* identical to box height, or 47px */
+
+
+    /* or3 */
+
+    color: #FE9013;
+  }
+  .inner_block{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    width:100%;
+    height: 964px;
+    left: 220px;
+    right: 220px;
+    top: 804px;
+
+    background: rgba(255, 255, 255, 0.52);
+    backdrop-filter: blur(2px);
+    /* Note: backdrop-filter has minimal browser support */
+
+    border-radius: 20px;
+  }
+
+  .inner_block_header>p{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 120%;
+    /* identical to box height, or 58px */
+    
+    text-align: center;
+    
+    /* or3 */
+    
+    color: #FE9013;
+  }
+  .second_inner_block_header{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 120%;
+    /* identical to box height, or 29px */
+
+
+    color: #333B41;
+    margin-bottom: 10%;
+  }
+
+  .bear_picture{
+    display:flex;
+    justify-content: space-around;
+  }
+
+  footer{
+    display: grid;
+    grid-template-areas: 
+      " logo  . subscribe "
+      "donate . . "
+      "cocialMedia menu desined";
+    grid-template-columns: 0.7fr, 1fr, 1.5fr;
+    grid-template-rows: 1fr 1fr 2fr ;
+    width: 100%;
+    height: 443px;   
+    background: #111115;
+    padding: 3% 30% 0 5%;
+  }
+
+  .logo_reg{
+    grid-area: logo;
+    margin-left: 0%;
+  }
+
+  .subscribe{
+    grid-area: subscribe;
+    display: flex;
+    flex-direction: column;
+    height: 42px;
+    width: 228px;
+    border-radius: 0px;
+
+  }
+
+  .donate{
+    grid-area: donate;
+    width: 298px;
+    height: 54px;
+    left: calc(50% - 298px/2);
+    top: 0px;
+    background-color: transparent;
+    border: none;
+
+  }
+
+  .socialMeadia{
+    grid-area: cocialMedia;
+  }
+
+  .menu{
+    grid-area: menu;
+  }
+
+  .signature{
+    grid-area: desined;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 100;
+    font-size: 16px;
+    line-height: 130%;
+    display: flex;
+    align-items: center;
+
+
+    color: #FFFFFF;
+  }
+  
+  .subscribe_header>p{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 120%;
+    color: #FFFFFF;
+  }
+  
+  
