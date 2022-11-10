@@ -48,13 +48,14 @@
     width: 100vw;
     height: 100px;
     background-color: #000000;
+    position: relative;
 
   }
   .menu{
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding-top: 1%;
+    padding: 1% 10% 0 10%;
   }
 
   a:hover{
@@ -70,7 +71,7 @@
     letter-spacing: 0em;
     text-align: left;
     vertical-align:middle;
-    margin: 0 2%;
+    margin: 0 3%;
   }
 
   .logo{
@@ -98,9 +99,7 @@
   }
 
   .desined{
-    position: relative;
-    display: inline-block;
-    left: 30%;
+    margin-left: auto;
     color: #FFFFFF;
     font-family: Roboto;
     font-size: 19px;
@@ -179,6 +178,7 @@
   
   .backstage_text{
     width: 40%;
+    z-index: 10; 
   }
 
   .backstage_text >h2 {
@@ -218,7 +218,7 @@
     grid-template-areas: 
       " arrow_left galery-item--1  galery-item--2  galery-item--3  arrow_right "
       "  .   galery-item--4  galery-item--5  galery-item--6  .  "
-      " palmphoto palmphoto galery_btn  . strelitzia";
+      " . . galery_btn  . .";
     grid-template-columns: 1fr 1.5fr 1.5fr 1.5fr 1fr;
     grid-template-rows: 1.5fr 1.5fr 0.7fr;
     grid-column-gap:2%;
@@ -259,19 +259,11 @@
     grid-area: arrow_right;
   }
 
-  .palmphoto{
-    grid-area: palmphoto;
-  }
-
   .galery_btn{
     grid-area: galery_btn;
     margin-left: 10%;
   }
   
-  .strelitzia{
-    grid-area: strelitzia;
-  }
-
   .galery_img{
     width: 100%;
     height: 85%;
@@ -363,18 +355,28 @@
     margin-top: 15%;
   }
 
-  .palmphoto {
+  .animals_cards_container::before {
+    content: '';
+    position:absolute;
     background-image: url("../../assets/images/animalsСards/palm_foto.png");
     background-repeat:no-repeat;
-    width: 100%; 
-    height: 100%; 
+    width: 880px; 
+    height: 460px; 
+    top: 2435px;
+    left: 0;
+    z-index: -10; 
   }
 
-  .strelitzia {
+  .animals_cards_container::after{
+    content: '';
+    position:absolute;
     background-image: url("../../assets/images/animalsСards/strelitzia.png");
     background-repeat:no-repeat;
-    width: 100%; 
-    height: 100%;  
+    width: 368px; 
+    height: 275px; 
+    top: 2620px;
+    right: 0;
+    z-index: -10;  
   }
 
   .pick_and_feed{
@@ -401,9 +403,7 @@
   .text_inside{
     display: flex;
     flex-direction: column;
-    margin-bottom: 5%;
     margin-left: 0;
-
   }
 
   .text_inside_ordinary{ 
@@ -439,28 +439,35 @@
     justify-content: center;
     flex-direction: column;
     width: 80%;
-    height: 30%;
+    height: 40%;
   }
 
   .how_header{
     align-self: center;
-    margin-bottom: 10%;
+    margin-bottom: 5%;
   }
 
   .widjets{
     display: flex;
     width:100%;
-    justify-content: center;
+    margin: 0 auto;
+    justify-content: space-around;
     align-items: center;
   }
 
-  .widjet_img{
-    background: url("../../assets/images/pikAndFeed/Rectangle\ 14.png");
-    background-repeat: no-repeat;
-    background-size:auto;
-    background-position: center;
-    height: 5em;
-    padding:2%;
+  .widjet{
+    max-width:10em;
+    height: 10em;
+  }
+
+  .widjet_card{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    height: 10em;
+    width: 10em;
+    text-align: center;
   }
 
   .widjet_p{
@@ -505,6 +512,7 @@
     
     margin: 0 10% 2% 10%;
   }
+
   .feebback{
     padding: 5%;   
     box-sizing: border-box;
@@ -516,14 +524,14 @@
     border-radius: 20px;
     }
 
-    .feebback >p{
-      font-family: 'Roboto';
-      font-style: normal;
-      font-weight: 300;
-      font-size: 15px;
-      line-height: 120%;
-      color: #767474;
-    }
+  .feebback >p{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 120%;
+    color: #767474;
+  }
 
   .scrol{
       display:flex;
@@ -566,15 +574,15 @@
   footer{
     display: grid;
     grid-template-areas: 
-      " logo  . subscribe "
-      "donate . . "
-      "cocialMedia menu desined";
-    grid-template-columns: 0.7fr, 1fr, 1.5fr;
+      " logo  .  subscribe "
+      "donate  .  .  "
+      "cocialMedia  footer_menu  desined";
+    grid-template-columns: 1fr  1.5fr 1fr;
     grid-template-rows: 1fr 1fr 2fr ;
-    width: 100%;
+    width: 80%;
     height: 443px;   
     background: #111115;
-    padding: 3% 30% 0 5%;
+    padding: 3% 10% 3% 10%;
   }
 
   .logo_reg{
@@ -587,9 +595,35 @@
     display: flex;
     flex-direction: column;
     height: 42px;
-    width: 228px;
+    width: 100%;;
     border-radius: 0px;
+  }
 
+  .subscribe_header{
+    padding-left: 10%;
+  }
+
+  .email_subtmit{
+    display: flex;
+    justify-content: end;
+  }
+
+  .subscribe_input{
+    background-color: #000000;
+    box-sizing: border-box;
+    height: 42px;
+    border-radius: 2px;
+    border: 0.7px solid;
+    border-image-source: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+  }
+
+  .subscribe_input::placeholder{
+    color:#F5F7F6;
+  }
+
+  .submit{
+    background-color: transparent;
+    border: none;
   }
 
   .donate{
@@ -600,15 +634,21 @@
     top: 0px;
     background-color: transparent;
     border: none;
-
   }
 
   .socialMeadia{
     grid-area: cocialMedia;
+    display:flex;
+    flex-direction: column ;
+
   }
 
-  .menu{
-    grid-area: menu;
+  .footer_menu{
+    grid-area: footer_menu;
+  }
+
+  .footer_nav-item{
+    padding: 0 5% 0 5%;
   }
 
   .signature{
@@ -620,9 +660,8 @@
     line-height: 130%;
     display: flex;
     align-items: center;
-
-
     color: #FFFFFF;
+    justify-content: end;
   }
   
   .subscribe_header>p{
