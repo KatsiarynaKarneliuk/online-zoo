@@ -48,13 +48,14 @@
     width: 100vw;
     height: 100px;
     background-color: #000000;
+    position: relative;
 
   }
   .menu{
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding-top: 1%;
+    padding: 1% 10% 0 10%;
   }
 
   a:hover{
@@ -70,7 +71,7 @@
     letter-spacing: 0em;
     text-align: left;
     vertical-align:middle;
-    margin: 0 2%;
+    margin: 0 3%;
   }
 
   .logo{
@@ -98,9 +99,7 @@
   }
 
   .desined{
-    position: relative;
-    display: inline-block;
-    left: 30%;
+    margin-left: auto;
     color: #FFFFFF;
     font-family: Roboto;
     font-size: 19px;
@@ -213,15 +212,15 @@
   footer{
     display: grid;
     grid-template-areas: 
-      " logo  . subscribe "
-      "donate . . "
-      "cocialMedia menu desined";
-    grid-template-columns: 0.7fr, 1fr, 1.5fr;
+      " logo  .  subscribe "
+      "donate  .  .  "
+      "cocialMedia  footer_menu  desined";
+    grid-template-columns: 1fr  1.5fr 1fr;
     grid-template-rows: 1fr 1fr 2fr ;
-    width: 100%;
+    width: 80%;
     height: 443px;   
     background: #111115;
-    padding: 3% 30% 0 5%;
+    padding: 3% 10% 3% 10%;
   }
 
   .logo_reg{
@@ -234,9 +233,35 @@
     display: flex;
     flex-direction: column;
     height: 42px;
-    width: 228px;
+    width: 100%;;
     border-radius: 0px;
+  }
 
+  .subscribe_header{
+    padding-left: 10%;
+  }
+
+  .email_subtmit{
+    display: flex;
+    justify-content: end;
+  }
+
+  .subscribe_input{
+    background-color: #000000;
+    box-sizing: border-box;
+    height: 42px;
+    border-radius: 2px;
+    border: 0.7px solid;
+    border-image-source: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+  }
+
+  .subscribe_input::placeholder{
+    color:#F5F7F6;
+  }
+
+  .submit{
+    background-color: transparent;
+    border: none;
   }
 
   .donate{
@@ -247,15 +272,21 @@
     top: 0px;
     background-color: transparent;
     border: none;
-
   }
 
   .socialMeadia{
     grid-area: cocialMedia;
+    display:flex;
+    flex-direction: column ;
+
   }
 
-  .menu{
-    grid-area: menu;
+  .footer_menu{
+    grid-area: footer_menu;
+  }
+
+  .footer_nav-item{
+    padding: 0 5% 0 5%;
   }
 
   .signature{
@@ -267,18 +298,8 @@
     line-height: 130%;
     display: flex;
     align-items: center;
-
-
     color: #FFFFFF;
-  }
-  
-  .subscribe_header>p{
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 120%;
-    color: #FFFFFF;
+    justify-content: end;
   }
   
   
