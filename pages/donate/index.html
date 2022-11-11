@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Desktop_petstory</title>
+    <title>Donate</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
@@ -18,10 +18,10 @@
                 <div class="logo_reg">
                     <div class="logo">PetStory online</div>
                 </div>
-                <a class="nav-item" href="#About">About</a>
+                <a class="nav-item" href="../main/index.html">About</a>
                 <a class="nav-item" href="#Map">Map</a>
                 <a class="nav-item" href="#Zoos">Zoos</a>
-                <a class="nav-item" href="../donate/index.html">Donate</a>
+                <a class="nav-item active" href="../donate/index.html">Donate</a>
                 <a class="nav-item" href="#Contact us">Contact us</a>
                 <a class="nav-item desined"
                     href="https://www.figma.com/file/ypzT9idgAILaSRVRmDAJxn/online-zoo-3-weeks?node-id=0%3A1&t=EN9R5W8uyx9HLP1o-0">Desined
@@ -30,19 +30,18 @@
         </header>
     </section>
     <main>
-        <h1></h1>
-        <p></p>
-        <h2></h2>
+
         <section class="pick_and_feed">
             <div class="pick_header">
-                <p>THE ZOO HAS OFFICIALLY REOPENED BUT WE STILL NEED YOUR HELP!</p>
+                <h3>THE ZOO HAS OFFICIALLY REOPENED BUT WE STILL NEED YOUR HELP!</h3>
             </div>
-            <p>Even though the Zoo has been able to reopen, we are at a greatly reduced capacity with educational
-                programs and public <br>
+            <p class="pick_header_p">Even though the Zoo has been able to reopen, we are at a greatly reduced capacity
+                with educational
+                programs and public
                 and private events cancelled or postponed for additional months. We need you now more than ever to
-                help ensure that we overcome<br>
+                help ensure that we overcome
                 these challenges. We have been actively raising funds in the community, and we are grateful for the
-                generosity. But much more<br>
+                generosity. But much more
                 support is still needed, and we need your help! Please consider a gift today – no matter what size –
                 to help us sustain our mission.</p>
             <div class="next_header">
@@ -50,7 +49,7 @@
             </div>
             <section class="inner_block">
                 <div>
-                    <p class="inner_block_header">Pick and feed a friend</p>
+                    <h2 class="inner_block_header">Pick and feed a friend</h2>
                 </div>
                 <div>
                     <p class="second_inner_block_header">We know the animals bring you joy, and in these extraordinary
@@ -59,27 +58,77 @@
 
                 <div class="bear_picture">
                     <div class="number">
-                        <img src="../../assets/images/donation/4.png" alt="number">
-                        <p>Panda diet for the day.</p>
+                        <img src="../../assets/images/donation/4.png" class="number" alt="number">
+                        <p class="number_text">Panda diet for the day.</p>
                     </div>
-                    <img src="../../assets/images/donation/multi.png" alt="multiply">
-                    <img src="../../assets/images/donation/Vector.png" alt="Bear">
+                    <img src="../../assets/images/donation/x_icon.png" class="multiply" alt="multiply">
+                    <img src="../../assets/images/donation/panda_widget1.png" alt="Bear">
                 </div>
                 <div class="choose_amount_line">
-                    <p>Amount</p>
-                    <img src="" alt="">
+                    <p class="amount_line_text">Amount</p>
+                    <div class="amount_line">
+
+                        <img src="../../assets/images/donation/Rectangle 12.png" alt="">
+                        <div class="amount_line_scale_divisions">
+
+                            <div class="amount_line_scale_division">
+                                <input type="radio" class="division">
+                                <img src="../../assets/images/donation/5000.png" alt="5000">
+                            </div>
+                            <div class="amount_line_scale_division">
+                                <input type="radio" class="division">
+                                <img src="../../assets/images/donation/2000.png" alt="2000">
+                            </div>
+                            <div class="amount_line_scale_division">
+                                <input type="radio" class="division">
+                                <img src="../../assets/images/donation/1000.png" alt="1000">
+                            </div>
+                            <div class="amount_line_scale_division">
+                                <input type="radio" class="division">
+                                <img src="../../assets/images/donation/500.png" alt="500">
+                            </div>
+                            <div class="amount_line_scale_division">
+                                <input type="radio" class="division">
+                                <img src="../../assets/images/donation/250.png" alt="250">
+                            </div>
+                            <div class="amount_line_scale_division">
+                                <input type="radio" class="division">
+                                <img src="../../assets/images/donation/100.png" alt="100">
+                            </div>
+                            <div class="amount_line_scale_division">
+                                <input type="radio" class="division">
+                                <img src="../../assets/images/donation/50.png" alt="50">
+                            </div>
+                            <div class="amount_line_scale_division">
+                                <input type="radio" class="division">
+                                <img src="../../assets/images/donation/25.png" alt="25">
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
-                <div class="choose_amount_input"></div>
-                <div>
-                    <input type="radio" id="monthly" value="monthly">
-                    <label for="monthly">Monthly</label>
+                <div class="choose_amount_input">
+                    <p class="anotherAmout">Another amount</p>
                 </div>
-                <div>
-                    <input type="radio" id="once" value="once" checked>
-                    <label for="monthly">Once</label>
+                <div class="radio">
+                    <div>
+                        <input type="radio" id="monthly" value="monthly" class="radio_circle">
+                        <label for="monthly">
+                            <p class="radio_text">Monthly</p>
+                        </label>
+                    </div>
+                    <div>
+                        <input type="radio" id="once" value="once" checked class="radio_circle">
+                        <label for="monthly">
+                            <p class="radio_text">Once</p>
+                        </label>
+                    </div>
                 </div>
-                <button></button>
-                <p></p>
+
+                <button class="feed_button">
+                    <img src="../../assets/images/donation/btn_2.png" alt="feed button">
+                </button>
+                <p class="shareText">Share with your friends on social networks </p>
             </section>
         </section>
     </main>
