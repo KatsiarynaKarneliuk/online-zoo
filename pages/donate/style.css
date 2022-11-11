@@ -222,7 +222,11 @@
     align-items: center;
     margin-bottom: 10%;
   }
- 
+
+  .choose_amount_line{
+    margin-bottom: 10%;
+  }
+
   .amount_line_text{
     font-family: 'Roboto';
     font-style: normal;
@@ -232,26 +236,28 @@
     color: #000000;
   }
 
-  .choose_amount_line{
-    margin-bottom: 10%;
-  }
-    
-
   .amount_line{
-    position: relative;
     background-image: url("../../assets/images/donation/Rectangle 11.png");
     background-repeat: no-repeat;
+    position:relative;
   }
-
-  
-  
 
   .amount_line_scale_divisions{
-    position: absolute; 
     display: flex;
-    justify-content: space-around;
+    justify-content:space-between;
   }
 
+  .division{
+    position: absolute;
+    z-index: 1;
+    top: 0; 
+    margin-bottom: 15%;
+  }
+
+  .input_devision{
+    color: #FFEE2E;
+  }
+  
   .choose_amount_input{
     box-sizing: border-box;
     border: 1px solid #929699;
