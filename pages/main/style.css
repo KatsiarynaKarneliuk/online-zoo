@@ -1,32 +1,33 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
-/*-----------------------------------------*/
-:root{
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+  /*-----------------------------------------*/
+  :root {
     /*font*/
     --body-font: 'Roboto', sans-serif;
     /*typography*/
     --h1-size: 114px;
     --h2-size: 48px;
     --h3-size: 36px;
-    --subtitle-size:24px;
-    --body-btn-size:16px;
-    --body-size:16px;
-    --small-p-size:15px;
+    --subtitle-size: 24px;
+    --body-btn-size: 16px;
+    --body-size: 16px;
+    --small-p-size: 15px;
 
     /*font-weight*/
     --font-light: 300;
     --font-regular: 400;
-    --font-medium:500;
-    --font-bold:700;
+    --font-medium: 500;
+    --font-bold: 700;
     /*line height*/
-    --h1-line-height:80%;
-    --h2-line-height:120%;
-    --h3-line-height:130%;
-    --subtitle-line-height:120%;
-    --body-btn-line-height:140%;
-    --body-line-height:140%;
-    --small-p-line-height:120%;
-}
+    --h1-line-height: 80%;
+    --h2-line-height: 120%;
+    --h3-line-height: 130%;
+    --subtitle-line-height: 120%;
+    --body-btn-line-height: 140%;
+    --body-line-height: 140%;
+    --small-p-line-height: 120%;
+  }
 
   * {
     margin: 0;
@@ -36,78 +37,88 @@
     font-style: normal;
     color: #ffffff;
   }
-  
+
   html {
     scroll-behavior: smooth;
   }
+
   body {
     font-family: "Roboto", "Arial", sans-serif;
+    margin: 0%;
   }
 
-  .section1{
+  .section1 {
     background-image: url("../../assets/images/section1/6c4379c95b7fac4756f94f501e2105b7.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
     width: 100vw;
-    height: 1000px;
-    margin-bottom: 8%;
+    height: 100vh;
+    background-position: center;
   }
-  .header{
+
+  .header {
     width: 100vw;
-    height: 100px;
+    height: 73px;
     background-color: #000000;
     position: relative;
-
   }
-  .menu{
+
+  .menu {
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 1% 10% 0 10%;
+    padding: 1% 10% 0 13%;
   }
 
-  a:hover{
+  a:hover,
+  a.nav-item:active {
     color: #FE9013;
   }
 
-  .nav-item{
-    color:#FFFFFF;
+  .nav-item {
+    color: #FFFFFF;
     font-family: Roboto;
     font-size: 16px;
     font-weight: 500;
-    line-height: 22px;
+    line-height: 15px;
     letter-spacing: 0em;
     text-align: left;
-    vertical-align:middle;
-    margin: 0 3%;
+    vertical-align: middle;
+    margin: 0 4% 0 0;
   }
 
-  .logo{
+  .logo {
+    display: flex;
+    justify-content: center;
     color: #FFFFFF;
     font-family: Roboto;
     font-size: 19px;
     font-weight: 400;
     line-height: 23px;
     letter-spacing: 0em;
-    text-align: center;   
+    text-align: center;
   }
 
-  .logo_reg{
+  .logo_reg {
     position: relative;
     display: inline-block;
+    align-items: center;
     width: 82px;
     height: 52px;
     border: 1px solid #FFFFFF;
     border-radius: 2px;
-    margin-left: 15%;
+    margin-right: 5%;
+    background-image: url('/online-zoo/assets/images/donation/bamboo.png');
+    background-repeat: no-repeat;
+    background-position: left bottom;
   }
 
-  .logo_reg:hover{
+  .logo_reg:hover {
     border-color: #F9804B;
   }
 
-  .desined{
-    margin-left: auto;
+  .desined {
+    margin-left: 30%;
     color: #FFFFFF;
     font-family: Roboto;
     font-size: 19px;
@@ -136,7 +147,7 @@
   .circle {
     width: 30em;
     position: relative;
-    right: -45%;
+    right: -50%;
     height: 30em;
     border-radius: 50%;
     background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
@@ -151,9 +162,9 @@
   .wtch_online_button{
     display: block;
     position: absolute;
-    right: 25%;
+    right: 20%;
     width: 300px;
-    margin-top: 2%;
+    margin-top: 4%;
   }
 
   main{
@@ -163,30 +174,31 @@
   .backstage {
     position: relative;
     width: 100vw;
-    height: 403px;
+    height: 63vh;
     display: flex;
     padding-bottom: 10%;
+    padding-top: 8%;
+    padding-left: 14%;
   } 
 
   .backstage_center {
-    width: 80%;
+    width: 80vw;
     display: flex;
-    justify-content: center;
-    padding: 0 10% 0 10%;
+    justify-content: space-between;
+
   } 
 
   .backstage_img{ 
-    display: flex;
-    max-width: 609px;
-    height: 403px;
-    width:40%;
-    margin-right: 10%;
-    margin-top: 2%;
+    width: 40vw;
+    margin: 0;
   }
-  
+
+  .backstage_img_cover{ 
+    width: 100%;
+    object-fit: cover;
+  }
   .backstage_text{
     width: 40%;
-    z-index: 10; 
   }
 
   .backstage_text >h2 {
@@ -195,6 +207,8 @@
     font-weight: 400;
     font-size: 48px;
     line-height: 120%;
+    color: #333B41;
+    margin-bottom: 3%;
   }
 
   .backstage_text >h3 {               
@@ -203,24 +217,38 @@
     font-weight: 400;
     font-size: 24px;
     line-height: 120%;
+    color: #333B41;
+    margin-bottom: 3%;
   }
 
   .backstage_text >h5{
-    height: 55px;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 140%;
+    color: #333B41;
+    margin-bottom: 7%;
   }
   
-  .backstage_right>img{
-    position: absolute;
-    top: 0;
-    height: 110%;
-    right: 0;
+  .backstage_right{
+
+    overflow: hidden;
   }
 
+  .backstage_right>img{
+    display:block;
+    height: 31rem;
+    width: auto;
+    padding: 0;
+    margin-left: 1%;
+  }
+  .leaves{
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0;
+  }
   .animals_cards{
     display: grid;
     grid-template-areas: 
@@ -579,62 +607,84 @@
     border: none;
   }
 
-  footer{
+  footer {
     display: grid;
-    grid-template-areas: 
+    grid-template-areas:
       " logo  .  subscribe "
       "donate  .  .  "
       "cocialMedia  footer_menu  desined";
-    grid-template-columns: 1fr  1.5fr 1fr;
-    grid-template-rows: 1fr 1fr 2fr ;
-
-    height: 443px;   
+    grid-template-columns: 1fr 1.5fr 1fr;
+    grid-template-rows: 1fr 1fr 1.5fr;
+    height: 443px;
     background: #111115;
-    padding: 3% 10% 3% 10%;
+    padding: 3% 14% 0% 14%;
   }
 
-  .logo_reg{
+  .logo_reg {
     grid-area: logo;
     margin-left: 0%;
   }
 
-  .subscribe{
+  .subscribe {
     grid-area: subscribe;
     display: flex;
     flex-direction: column;
     height: 42px;
-    width: 100%;;
+    width: 100%;
+    ;
     border-radius: 0px;
   }
 
-  .subscribe_header{
-    padding-left: 10%;
+  .subscribe_header {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 120%;
+    /* identical to box height, or 29px */
+    color: #FFFFFF;
   }
 
-  .email_subtmit{
+  .email_subtmit {
     display: flex;
-    justify-content: end;
   }
 
-  .subscribe_input{
+  .subscribe_input {
     background-color: #000000;
     box-sizing: border-box;
+    width: 228px;
     height: 42px;
+    border: 0.7px solid #FE9013;
     border-radius: 2px;
-    border: 0.7px solid;
-    border-image-source: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
   }
 
-  .subscribe_input::placeholder{
-    color:#F5F7F6;
+  .subscribe_input::placeholder {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: #BDBDBD;
+    padding-left: 3%;
   }
 
-  .submit{
-    background-color: transparent;
-    border: none;
+  .submit {
+    background: #F1F3F2;
+    box-sizing: border-box;
+    border: 1px solid #333B41;
+    border-radius: 5px;
+    width: 129px;
+    height: 42px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: #000000;
+    margin-left: 2%;
   }
 
-  .donate{
+  .donate {
     grid-area: donate;
     width: 298px;
     height: 54px;
@@ -644,22 +694,20 @@
     border: none;
   }
 
-  .socialMeadia{
+  .socialMeadia {
     grid-area: cocialMedia;
-    display:flex;
-    flex-direction: column ;
+    display: flex;
+    flex-direction: column;
 
   }
 
-  .footer_menu{
+  .footer_menu {
     grid-area: footer_menu;
+    display: flex;
+    justify-content: space-around;
   }
 
-  .footer_nav-item{
-    padding: 0 5% 0 5%;
-  }
-
-  .signature{
+  .signature {
     grid-area: desined;
     font-family: 'Roboto';
     font-style: normal;
@@ -671,14 +719,4 @@
     color: #FFFFFF;
     justify-content: end;
   }
-  
-  .subscribe_header>p{
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 120%;
-    color: #FFFFFF;
-  }
-  
   

@@ -31,9 +31,9 @@
     </section>
     <main>
 
-        <section class="pick_and_feed">
+        <form class="pick_and_feed" action="#">
             <div class="pick_header">
-                <h3>THE ZOO HAS OFFICIALLY REOPENED BUT WE STILL NEED YOUR HELP!</h3>
+                <p>THE ZOO HAS OFFICIALLY REOPENED BUT WE STILL NEED YOUR HELP!</p>
             </div>
             <p class="pick_header_p">Even though the Zoo has been able to reopen, we are at a greatly reduced capacity
                 with educational
@@ -67,86 +67,100 @@
                 <div class="choose_amount_line">
                     <p class="amount_line_text">Amount</p>
                     <div class="amount_line">
-
                         <img src="../../assets/images/donation/Rectangle 12.png" alt="" class="amount_line_relative">
                         <div class="amount_line_scale_divisions">
-
                             <div class="amount_line_scale_division">
                                 <div class="division">
-                                    <input type="radio" class="input_devision">
+                                    <input type="radio" name="scale" class="input_devision">
                                 </div>
-                                <img src="../../assets/images/donation/5000.png" alt="5000">
+                                <div class="amountDevision">
+                                    <p>&#36;5000</p>
+                                </div>
                             </div>
                             <div class="amount_line_scale_division">
                                 <div class="division">
-                                    <input type="radio" class="input_devision">
+                                    <input type="radio" name="scale" class="input_devision">
                                 </div>
-                                <img src="../../assets/images/donation/2000.png" alt="2000">
+                                <div class="amountDevision">
+                                    <p>&#36;2000</p>
+                                </div>
                             </div>
                             <div class="amount_line_scale_division">
                                 <div class="division">
-                                    <input type="radio" class="input_devision">
+                                    <input type="radio" name="scale" class="input_devision">
                                 </div>
-                                <img src="../../assets/images/donation/1000.png" alt="1000">
+                                <div class="amountDevision">
+                                    <p>&#36;1000</p>
+                                </div>
                             </div>
                             <div class="amount_line_scale_division">
                                 <div class="division">
-                                    <input type="radio" class="input_devision">
+                                    <input type="radio" name="scale" class="input_devision">
                                 </div>
-                                <img src="../../assets/images/donation/500.png" alt="500">
+                                <div class="amountDevision">
+                                    <p>&#36;500</p>
+                                </div>
                             </div>
                             <div class="amount_line_scale_division">
                                 <div class="division">
-                                    <input type="radio" class="input_devision">
+                                    <input type="radio" name="scale" class="input_devision">
                                 </div>
-                                <img src="../../assets/images/donation/250.png" alt="250">
+                                <div class="amountDevision">
+                                    <p>&#36;250</p>
+                                </div>
                             </div>
                             <div class="amount_line_scale_division">
                                 <div class="division">
-                                    <input type="radio" class="input_devision">
+                                    <input type="radio" name="scale" class="input_devision" color="#black">
                                 </div>
-                                <img src="../../assets/images/donation/100.png" alt="100">
+                                <div class="amountDevision">
+                                    <p>&#36;100</p>
+                                </div>
                             </div>
                             <div class="amount_line_scale_division">
                                 <div class="division">
-                                    <input type="radio" class="input_devision">
+                                    <input type="radio" name="scale" class="input_devision">
                                 </div>
-                                <img src="../../assets/images/donation/50.png" alt="50">
+                                <div class="amountDevision">
+                                    <p>&#36;50</p>
+                                </div>
                             </div>
                             <div class="amount_line_scale_division">
                                 <div class="division">
-                                    <input type="radio" class="input_devision">
+                                    <input type="radio" name="scale" class="input_devision">
                                 </div>
-                                <img src="../../assets/images/donation/25.png" alt="25">
+                                <div class="amountDevision">
+                                    <p>&#36;25</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-
                 </div>
                 <div class="choose_amount_input">
-                    <p class="anotherAmout">Another amount</p>
-                </div>
-                <div class="radio">
-                    <div>
-                        <input type="radio" id="monthly" value="monthly" class="radio_circle">
-                        <label for="monthly">
-                            <p class="radio_text">Monthly</p>
-                        </label>
+                    <label for="number"></label>
+                    <input type="number" id="number" name="number" class="anotherAmout"
+                        placeholder="Another amount                           $"></input>
+                    <div class="radio">
+                        <div>
+                            <input type="radio" id="monthly" name="howOften" value="monthly" class="radio_circle">
+                            <label for="monthly">
+                                <p class="radio_text">Monthly</p>
+                            </label>
+                        </div>
+                        <div>
+                            <input type="radio" id="once" name="howOften" value="once" checked class="radio_circle">
+                            <label for="monthly">
+                                <p class="radio_text">Once</p>
+                            </label>
+                        </div>
                     </div>
-                    <div>
-                        <input type="radio" id="once" value="once" checked class="radio_circle">
-                        <label for="monthly">
-                            <p class="radio_text">Once</p>
-                        </label>
-                    </div>
                 </div>
-
                 <button class="feed_button">
                     <img src="../../assets/images/donation/btn_2.png" alt="feed button">
                 </button>
                 <p class="shareText">Share with your friends on social networks </p>
             </section>
-        </section>
+        </form>
     </main>
 </body>
 <footer>
@@ -158,10 +172,10 @@
             <p> Subscribe to our news</p>
         </div>
         <div class="email_subtmit">
-            <input type="email" class="subscribe_input" placeholder="Enter your email" required>
-            <button class="submit">
-                <img src="../../assets/images/footer/send_btn_activ.png" alt="submit button">
-            </button>
+            <div class="borderForInput">
+                <input type="email" class="subscribe_input" placeholder="Enter your email" required>
+            </div>
+            <button class="submit">Submit</button>
         </div>
     </div>
     <a href="../donate/index.html" class="donate">
