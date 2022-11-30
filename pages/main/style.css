@@ -252,9 +252,9 @@
     grid-template-areas: 
       " arrow_left galery-item--1  galery-item--2  galery-item--3  arrow_right "
       "  .   galery-item--4  galery-item--5  galery-item--6  .  "
-      " . . galery_btn  . .";
-    grid-template-columns: 1fr 1.5fr 1.5fr 1.5fr 1fr;
-    grid-template-rows: 1.5fr 1.5fr 0.7fr;
+      " galery_btn_area galery_btn_area galery_btn_area  galery_btn_area galery_btn_area";
+    grid-template-columns: 0.8fr 1.5fr 1.5fr 1.5fr 0.92fr;
+    grid-template-rows: 1.5fr 1.5fr 1fr;
     grid-column-gap:2%;
     grid-row-gap:2%;
     width: 100%;
@@ -293,6 +293,9 @@
     grid-area: arrow_right;
   }
 
+  .galery_btn_area{
+    grid-area: galery_btn_area;
+  }
   .galery_btn{
     grid-area: galery_btn;
     margin-left: 10%;
@@ -300,13 +303,13 @@
   
   .galery_img{
     width: 100%;
-    height: 85%;
+    height: 88%;
     object-fit:cover;
   }
 
   .galery-item{
     width:100%;
-    height:100%;
+    height:26rem;
     border: solid 1px #FA6F32;
     border-radius: 5px;
     box-sizing: border-box;
@@ -321,8 +324,7 @@
     line-height: 0;
     text-transform: uppercase;
     color: #000000;
-    margin-left: 3%;
-    margin-bottom:0;
+    margin: 3% 3%;
   }
 
   .galery_text{
@@ -332,12 +334,13 @@
     font-size: 15px;
     line-height: 18px;
     margin-left: 3%;
+    color: #000000;
   }
 
   .arrow_right {
     position:absolute;
-    top: 100%;
-    right: 50%;
+    top: 25rem;
+    right: 8rem;
     display: block;
     width: 5em;
     height: 5em;
@@ -359,8 +362,8 @@
 
   .arrow_left {
     position:absolute;
-    left: 50%;
-    top: 100%;
+    left: 8rem;
+    top: 25rem;
     display: block;
     width: 5em;
     height: 5em;
@@ -379,15 +382,30 @@
     background-position: center;
     cursor: pointer;
   }
+  .galery_btn_area{
+    display: flex;
+  }
 
   .galery_btn {
-    background-image: url("../../assets/images/animalsСards/btn_1.png");
-    background-repeat:no-repeat;
-    background-color: transparent;
-    width: 100%;
+    width: 19rem;
+    height: 3rem;
     border: none;
-    margin-top: 15%;
+    margin-top: 5%;
+    margin-left: 40%;
+    background: #FE9013;
+    border-radius: 25px;
   }
+
+  .galery_btn_text{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
 
   .animals_cards_container::before {
     content: '';
@@ -396,7 +414,7 @@
     background-repeat:no-repeat;
     width: 880px; 
     height: 460px; 
-    top: 2435px;
+    top: 129rem;
     left: 0;
     z-index: -10; 
   }
@@ -408,7 +426,7 @@
     background-repeat:no-repeat;
     width: 368px; 
     height: 275px; 
-    top: 2620px;
+    top: 141rem;
     right: 0;
     z-index: -10;  
   }
@@ -420,19 +438,20 @@
     background: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #FEBDAB 100.95%, rgba(254, 210, 144, 0.7) 106.36%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
     opacity: 0.9;
     position: relative;
-    margin-bottom: 8%;
+
   }
 
   .inside_block{
     display: flex;
     align-items: center;
     flex-direction: column;
-    height: 796px;
-    width: 80%;
+    height: 53rem;
+    width: 72rem;
     background: rgba(253, 253, 255, 0.52);
     backdrop-filter: blur(2px);
     border-radius: 20px;
     margin: auto;
+    padding-top: 2rem;
   }
   .text_inside{
     display: flex;
@@ -447,6 +466,7 @@
     font-size: 16px;
     line-height: 130%;
     color: #333B41;
+    margin-top:1ren;
   }
 
   .text_inside_header4{
@@ -456,6 +476,7 @@
     font-size: 24px;
     line-height: 120%;
     color: #333B41;
+    margin-bottom: 3rem;
   }
 
   .pick_header{
@@ -466,19 +487,29 @@
     line-height: 120%;
     text-align: center;
     color: #FE9013;
+    margin-bottom: 3rem;
   }
 
   .how_it_works{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    width: 80%;
+    width: 67%;
     height: 40%;
   }
 
   .how_header{
     align-self: center;
     margin-bottom: 5%;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 130%;
+    /* identical to box height, or 47px */
+
+
+    color: #333B41;
   }
 
   .widjets{
@@ -502,27 +533,56 @@
     height: 10em;
     width: 10em;
     text-align: center;
+    border-color: #FE9013;
+    border-radius: 5px;
+    margin-bottom: 2rem;
   }
 
   .widjet_p{
     padding-top: 5%;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    /* or 22px */
+
+
+    color: #333B41;
   }
 
   .connection{
     display: block;
     margin: 0 2% 0 2%;
   }
+  
+  .pik_feed_button_area{
+    display: flex;
+    justify-content: center;
+  }
 
   .pik_feed_button{
-    background: url("../../assets/images/pikAndFeed/btn_1.png");
-    position: absolute;
-    bottom: 0;
-    left:40%;
-    width: 30%;
-    height: 15%;
-    background-repeat: no-repeat;
-    background-color: transparent;
+    width: 19rem;
+    height: 3rem;
     border: none;
+    margin-top: 5%;
+
+    background: #FE9013;
+    border-radius: 25px;
+  }
+
+  .pik_feed_button_text{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    /* or 22px */
+
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
   }
 
   .testimonials{
@@ -593,18 +653,33 @@
     border-radius: 5px;
   }
 
+  .leave_feedback_btn_area{
+    display:flex;
+  }
+
   .leave_feedback{
-    background: url("../../assets/images/pikAndFeed/btn_2.png");
     position:absolute;
     bottom:-25%;
     left:10%;
-    width: 30%;
-    height: 15%;
-    background-repeat: no-repeat;
-    background-color: transparent;
-    border: none;
+    width: 19rem;
+    height: 3rem;
+    background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+    border-radius: 5px;
   }
+  .leave_feedback_btn_text{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    /* or 22px */
 
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+
+}
   footer {
     display: grid;
     grid-template-areas:
@@ -717,4 +792,82 @@
     color: #FFFFFF;
     justify-content: end;
   }
+  
+  @media all and(max-width:640px){
+    
+
+    .section1 {
+      height: 30vh;
+    }
+
+    .menu{
+      display: none;
+    }
+    .nav-item {
+      display: none;
+    }
+
+    .desined{
+      display: none;
+    }
+
+    .circle {
+      width: 15rem;
+      position: relative;
+      right: -20%;
+      height: 15rem;
+      border-radius: 50%;
+      background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+      display: block;
+      margin-top: 1%;
+    }
+
+    .wtch_online_button{
+      position: absolute;
+      left: 10%;
+    }
+
+    .backstage {
+      position: relative;
+      width: 100vw;
+      display: flex;
+      padding-bottom: 10vh;
+      padding-top: 8%;
+      padding-left: 1%;
+    } 
+  
+    .backstage_center {
+      width: 100vw;
+    } 
+  
+    .backstage_img{ 
+      display: none;
+    }
+    .animals_cards{
+      grid-template-areas: 
+        "galery-item  galery-item"
+        "arrow_left       arrow_right"
+        "galery-item    galery-item"
+        "galery_btn_area    galery_btn_area";
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1.5fr 1fr 1.5fr 1fr;
+      grid-column-gap:2%;
+      grid-row-gap:2%;
+      width: 100%;
+      position: relative;
+    }
+
+    .galery_btn_area {
+      justify-content: center;
+    }
+    
+    .leave_feedback_btn_area{
+      justify-content: center;
+    }
+
+    .feedbacks{ 
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+  }
+    
   
