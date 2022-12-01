@@ -125,14 +125,27 @@
     font-weight: 400;
     line-height: 23px;
   }
+  .circle_with_text{
+    max-height:40rem;
+  }
+
+  .circle {
+    display: block;
+    position: relative;
+    right: -50%;
+    height: 30rem;
+    width: 30rem;
+    border-radius: 50%;
+    background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+    margin-top: 1%;
+  }
 
   .circle_text{   
     position: absolute;
-    width: 500.31px;
-    height: 400px;
+    max-width: 500.31px;
+    max-height: 400px;
     left: calc(50% - 500.31px/2 + 330.15px);
     top: 166px;
-
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
@@ -141,19 +154,8 @@
     text-align: center;
     text-transform: uppercase;
     color: #FFFFFF;
-
   }
-  .circle {
-    width: 30em;
-    position: relative;
-    right: -50%;
-    height: 30em;
-    border-radius: 50%;
-    background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
-    display: block;
-    margin-top: 1%;
-  }
-  
+ 
   .circle_text_yellow{
     color: #FFEE2E;
   }
@@ -162,7 +164,7 @@
     display: block;
     position: absolute;
     right: 20%;
-    width: 300px;
+    max-width: 300px;
     margin-top: 4%;
   }
 
@@ -172,7 +174,7 @@
 
   .backstage {
     position: relative;
-    width: 100vw;
+    max-width: 100vw;
     display: flex;
     padding-bottom: 10vh;
     padding-top: 8%;
@@ -180,23 +182,23 @@
   } 
 
   .backstage_center {
-    width: 80vw;
+    max-width: 80vw;
     display: flex;
     justify-content: space-between;
 
   } 
 
   .backstage_img{ 
-    width: 40vw;
+    max-width: 40vw;
     margin: 0;
   }
 
   .backstage_img_cover{ 
-    width: 100%;
+    max-width: 100%;
     object-fit: cover;
   }
   .backstage_text{
-    width: 40%;
+    max-width: 40%;
   }
 
   .backstage_text >h2 {
@@ -237,15 +239,18 @@
   .backstage_right>img{
     display:block;
     height: 31rem;
-    width: auto;
+    max-width: auto;
     padding: 0;
     margin-left: 1%;
   }
   .leaves{
-    width: 100%;
-    height: auto;
+    max-width: 100%;
+    max-height: auto;
     padding: 0;
     margin: 0;
+  }
+  .animals_cards_container{
+    max-width: 100%;
   }
   .animals_cards{
     display: grid;
@@ -257,7 +262,7 @@
     grid-template-rows: 1.5fr 1.5fr 1fr;
     grid-column-gap:2%;
     grid-row-gap:2%;
-    width: 100%;
+    max-width: 100%;
     position: relative;
   }
 
@@ -302,14 +307,14 @@
   }
   
   .galery_img{
-    width: 100%;
-    height: 88%;
+    max-width: 100%;
+    max-height: 88%;
     object-fit:cover;
   }
 
   .galery-item{
-    width:100%;
-    height:26rem;
+    max-width:100%;
+    max-height:26rem;
     border: solid 1px #FA6F32;
     border-radius: 5px;
     box-sizing: border-box;
@@ -438,19 +443,18 @@
     background: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #FEBDAB 100.95%, rgba(254, 210, 144, 0.7) 106.36%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
     opacity: 0.9;
     position: relative;
-
   }
 
   .inside_block{
     display: flex;
     align-items: center;
     flex-direction: column;
-    height: 53rem;
+    height: 63rem;
     width: 72rem;
     background: rgba(253, 253, 255, 0.52);
     backdrop-filter: blur(2px);
     border-radius: 20px;
-    margin: auto;
+    margin: 0 auto;
     padding-top: 2rem;
   }
   .text_inside{
@@ -514,7 +518,7 @@
 
   .widjets{
     display: flex;
-    width:100%;
+    width:80%;
     margin: 0 auto;
     justify-content: space-around;
     align-items: center;
@@ -522,7 +526,7 @@
 
   .widjet{
     max-width:10em;
-    height: 10em;
+    max-height: 10em;
   }
 
   .widjet_card{
@@ -603,7 +607,7 @@
       " feebback feebback feebback feebback";
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr;
-    
+    max-width: 80%;
     margin: 0 10% 2% 10%;
   }
 
@@ -860,7 +864,7 @@
     .galery_btn_area {
       justify-content: center;
     }
-    
+
     .leave_feedback_btn_area{
       justify-content: center;
     }
