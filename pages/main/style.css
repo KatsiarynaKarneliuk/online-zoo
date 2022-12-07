@@ -67,6 +67,43 @@
     position: relative;
   }
 
+  .menu-btn {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 0;
+    z-index:2;
+    overflow: hidden;
+  }
+  .menu-btn span {
+    width: 30px;
+    height: 2px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #FFFFFF;
+    transition: all 0.5s;
+  }
+  .menu-btn span:nth-of-type(2) {
+    top: calc(50% - 5px);
+  }
+  .menu-btn span:nth-of-type(3) {
+    top: calc(50% + 5px);
+  }
+
+  /* Changing the burger icon when the menu is open */
+  .menu-btn.active span:nth-of-type(1) {
+    display: none;
+  }
+  .menu-btn.active span:nth-of-type(2) {
+    top: 50%;
+    transform: translate(-50%, 0%) rotate(45deg);  
+  }
+  .menu-btn.active span:nth-of-type(3) {
+    top: 50%;
+    transform: translate(-50%, 0%) rotate(-45deg); 
+  }
   .menu {
     display: flex;
     flex-direction: row;
@@ -251,6 +288,7 @@
 
   .animals_card_container_wrapper{  
     display:flex;
+    flex-direction: column;
     width: 100%;  
     height: 100vh;
     position: relative;
@@ -270,7 +308,7 @@
   
   .animals_cards {
     display: grid;
-    grid-gap: 16px;
+    grid-gap: 3% 3%;
     grid-auto-flow: column;
     margin: auto;
     box-sizing: border-box;
@@ -912,8 +950,8 @@
     color: #FFFFFF;
     justify-content: end;
   }
- 
-  @media only screen and (min-width: 641px) and (max-width: 1000px){
+  @media only screen and (min-width: 1000px) and (max-width: 1600px)
+ {
     .backstage_right>img{ 
       display: none;
     }
@@ -923,18 +961,15 @@
     }
   
   }
-  @media(max-width:640px){
+  @media only screen and (min-width: 640px) and (max-width: 999px){
     .header{
-      height: 35px;
+      min-height: 35px;
     }
 
     .section1 {
       height: 50vh;
     }
 
-    .menu{
-      display: none;
-    }
     .nav-item {
       display: none;
     }
@@ -974,7 +1009,28 @@
     }
   }
 
-  @media only screen and (max-width: 640px){
+  @media only screen and (max-width: 639px){
+    .header{
+      height: 10%;
+    }
+    .menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 50%;
+      height: 50%;
+      padding: 15px;
+      background: #FFEFBA;
+      transform: translateX(-100%);
+      transition: transform 0.5s; 
+    }
+    .menu.active {
+      transform: translateX(0);
+    }
+    .menu a {
+      list-style-type: none;
+    }
+
     .circle {
       width: 8rem;
       height: 8rem;
@@ -996,6 +1052,10 @@
     .backstage_text >h2,
     .backstage_text >h3{
       font-size: 24px;
+    }
+
+    .backstage_img{
+      display:none;
     }
 
     .backstage_text >h5{

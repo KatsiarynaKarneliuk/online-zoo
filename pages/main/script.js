@@ -1,3 +1,10 @@
+// burger
+let menuBtn = document.querySelector('.menu-btn');
+let menu = document.querySelector('.menu');
+menuBtn.addEventListener('click', function(){
+	menuBtn.classList.toggle('active');
+	menu.classList.toggle('active');
+})
 
 // testimonials
 let fragment = new DocumentFragment();
@@ -90,8 +97,8 @@ const gap = 16;
 
 const carousel = document.querySelector(".animals_cards_container"),
   content = document.querySelector(".animals_cards"),
-  next = document.querySelector(".next"),
-  prev = document.querySelector(".prev");
+  next = document.querySelector(".arrow_right"),
+  prev = document.querySelector(".arrow_left");
 
 next.addEventListener("click", e => {
   carousel.scrollBy(width + gap, 0);
@@ -114,3 +121,5 @@ prev.addEventListener("click", e => {
 
 let width = carousel.offsetWidth;
 window.addEventListener("resize", e => (width = carousel.offsetWidth));
+
+
