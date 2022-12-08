@@ -35,8 +35,8 @@ function getFeedbacks(){
                     modal_content_text.append(data[i].personName,data[i].text);
                     modal_content.append(modal_content_text,close_modal_button);
                     modal.append(modal_content);
-                    close_modal_button.addEventListener("click", function() {
-                    modal.classList.toggle('close');
+                    close_modal_button.addEventListener("click", function() {if(modal.classList==='show'){
+                    modal.classList.toggle('close')};
                     });
                     modal.classList.add('modal');
                     modal_content.classList.add('modal_content');
