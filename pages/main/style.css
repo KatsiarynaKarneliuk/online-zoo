@@ -997,6 +997,41 @@
       transform: translate(-50%, 0%) rotate(-45deg); 
     }
 
+     .testimonials{
+      max-height: 650px;
+    }
+
+    .scroll{
+      display: none;
+    }
+
+    .feedbacksBtns{
+      display: none;
+    }
+
+    .feedbackContainer{
+      max-height: 350px;
+      overflow: scroll;
+      margin-bottom: 2%;
+    }
+
+    .feedbacks{
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(3, 1fr);
+      row-gap: 1%;
+      overflow-y: scroll;
+    }
+
+    .feedback{
+      height: 109px;
+    }
+
+    .leave_feedback_btn_area{
+      display: flex;
+      justify-content: center;
+    }
+
   }
   @media only screen and (min-width: 641px) and (max-width: 999px){
     .header{
@@ -1150,9 +1185,6 @@
       margin-top: 1%;
     }
 
-    .testimonials{
-      max-height: 550px;
-    }
     .feedbackContainer{
       min-height: 330px;
       overflow: scroll;
