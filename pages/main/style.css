@@ -373,6 +373,7 @@
   
   .galery_btn_area{
     display: flex;
+    margin: auto 0;
   }
 
   .galery_btn {
@@ -396,26 +397,26 @@
     color: #FFFFFF;
 }
 
-  .animals_cards_container::before {
+  .animals_card_container_wrapper::before {
     content: '';
     position:absolute;
     background-image: url("../../assets/images/animalsСards/palm_foto.png");
     background-repeat:no-repeat;
-    width: 880px; 
-    height: 460px; 
-    top: 129rem;
+    width: 880px;
+    height: 460px;
+    bottom:0;
     left: 0;
     z-index: -10; 
   }
 
-  .animals_cards_container::after{
+  .animals_card_container_wrapper::after{
     content: '';
     position:absolute;
     background-image: url("../../assets/images/animalsСards/strelitzia.png");
     background-repeat:no-repeat;
     width: 368px; 
     height: 275px; 
-    top: 141rem;
+    bottom:0;
     right: 0;
     z-index: -10;  
   }
@@ -714,7 +715,7 @@
 
   .leave_feedback{
     position:absolute;
-    left:10%;
+    margin: 0 auto;
     width: 19rem;
     height: 3rem;
     background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
@@ -825,7 +826,7 @@
     grid-area: subscribe;
     display: flex;
     flex-direction: column;
-    height: 42px;
+    max-height: 42px;
     width: 100%;
     border-radius: 0px;
   }
@@ -847,8 +848,8 @@
   .subscribe_input {
     background-color: #000000;
     box-sizing: border-box;
-    width: 228px;
-    height: 42px;
+    max-width: 228px;
+    max-height: 42px;
     border: 0.7px solid #FE9013;
     border-radius: 2px;
   }
@@ -910,12 +911,13 @@
     font-size: 16px;
     line-height: 130%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     color: #FFFFFF;
-    justify-content: end;
+    justify-content: center;
   }
-  @media only screen and (min-width: 1000px) and (max-width: 1600px)
- {
+  @media only screen and (min-width: 1000px) and (max-width: 1599px)
+  {
     .backstage_right>img{ 
       display: none;
     }
@@ -924,8 +926,39 @@
       min-width:294px;
     }
   
+    .animals_card_container_wrapper::before{
+      height: 202px;
+      width: 386px;
+    }
+    .animals_card_container_wrapper::after{
+      height: 180px;
+      width: 241px;
+    }
   }
   @media only screen and (min-width: 320px) and (max-width: 999px){
+    .menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 50%;
+      height: 50%;
+      padding: 15px;
+      background: #E5E5E5;
+      transform: translateX(-100%);
+      transition: transform 0.5s;
+      display: flex;
+      flex-direction: column;
+      justify-content:left;
+    }
+    .menu.active {
+      transform: translateX(0);
+      
+    }
+    .menu a {
+      color:#333B41;
+
+    }
+
     .menu-btn {
       width: 30px;
       height: 30px;
@@ -963,8 +996,9 @@
       top: 50%;
       transform: translate(-50%, 0%) rotate(-45deg); 
     }
+
   }
-  @media only screen and (min-width: 640px) and (max-width: 999px){
+  @media only screen and (min-width: 641px) and (max-width: 999px){
     .header{
       min-height: 35px;
     }
@@ -1003,40 +1037,29 @@
     .backstage_img{ 
       display: none;
     }
+
+    .animals_card_container_wrapper::before{
+      height: 202px;
+      width: 385px;
+    }
+    .animals_card_container_wrapper::after{
+      height: 131px;
+      width: 175px;
+    }
     .pick_and_feed{
       padding: 1%;
     }
 
-    .feedbacks{ 
-      flex-direction: colomn;
-    }
     .subscribe{
       display:none;
     }
   }
 
-  @media only screen and (max-width: 639px){
+  @media only screen and (max-width: 640px){
     .header{
       height: 10%;
     }
-    .menu {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 50%;
-      height: 50%;
-      padding: 15px;
-      background: #FFEFBA;
-      transform: translateX(-100%);
-      transition: transform 0.5s; 
-    }
-    .menu.active {
-      transform: translateX(0);
-    }
-    .menu a {
-      list-style-type: none;
-    }
-
+    
     .circle {
       width: 8rem;
       height: 8rem;
@@ -1050,6 +1073,8 @@
     }
     .wtch_online_button{
       margin-top: 20%;
+      text-align: center;
+      max-width: 298px;
     }
     .section1 {
       height: 30vh;
@@ -1067,6 +1092,16 @@
     .backstage_text >h5{
       font-size: 16px;
     }
+    
+
+    .animals_card_container_wrapper::before{
+      height: 72px;
+      width: 138px;
+    }
+    .animals_card_container_wrapper::after{
+      height: 71px;
+      width: 85px;
+    }
 
     .arrow_left,
     .arrow_right {
@@ -1075,13 +1110,22 @@
     .animals_card_container_wrapper{
       flex-direction: column;
     }
+
+    .pick_and_feed{
+      max-height: 1082px;
+      padding: 1%;
+    }
+
+    .inside_block{
+      max-height: 1042px;
+    }
     .how_it_works{
-      min-height:  1042px;
+      min-height:  880px;
       justify-content: start;
     }
     .widjets{
       flex-direction:column;
-      height: 100vh;
+      min-height: 670px;
     }
     .text_inside_ordinary{
       display: none;
@@ -1091,12 +1135,78 @@
       margin-bottom:1%;
       font-size: 24px;
     }
+
     .how_header{
       margin-bottom: 0;
       font-size: 24px;
     }
-    text_inside_header4{
+
+    .text_inside_header4{
       font-size: 18px;
       line-height: 130%;
     }
+
+    .pik_feed_button{
+      margin-top: 1%;
+    }
+
+    .testimonials{
+      max-height: 550px;
+    }
+    .feedbackContainer{
+      min-height: 330px;
+      overflow: scroll;
+    }
+
+    .feedbacks{
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(3, 1fr);
+      row-gap: 1%;
+      overflow-y: scroll;
+    }
+
+    .feedback{
+      max-height: 109px;
+    }
+
+    .feedbacksBtns{
+      display: none;
+    }
+    .scroll{
+      display: none;
+    }
+  
+    .leave_feedback{
+      max-width: 240px;
+    }
+
+    footer{
+      display:flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 1%;
+      margin: 0 auto;
+      max-height: 334px;
+    }
+    .subscribe {
+      display: none;
+    }
+
+    .donate{
+      max-width: 298px;
+    }
+
+    .socialMeadia {
+      grid-area: cocialMedia;
+      display: flex;
+      flex-direction: row;
+    }
+  
+    .footer_menu {
+      grid-area: footer_menu;
+      display: flex;
+      justify-content: space-around;
+    }
+
   }
