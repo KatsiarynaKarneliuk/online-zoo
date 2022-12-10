@@ -57,7 +57,7 @@ function getFeedbacks(){
 };
 getFeedbacks();
 
-// slider
+// feedback slider
 let sliderCircle = document.querySelector('input[type="range"]');
 let rangeValue = function(){
     let newValue = sliderCircle.value;
@@ -92,7 +92,7 @@ const prevFeedback = () =>{
 btnNext.addEventListener('click', nextFeedback);
 btnPrev.addEventListener('click', prevFeedback);
 
-
+// pets carusel
 const gap = 16;
 
 const carousel = document.querySelector(".animals_cards_container"),
@@ -123,3 +123,108 @@ let width = carousel.offsetWidth;
 window.addEventListener("resize", e => (width = carousel.offsetWidth));
 
 
+/* variant with generated pet's carusel
+const pets =[
+  {
+    id: 1,
+    img: "../../assets/images/animalsСards/panda.png",
+    header:"giant Pandas",
+    text: "Native to Southwest China",
+  },
+  {
+    id: 2,
+    img: "../../assets/images/animalsСards/bird.png",
+    header:"Eagles",
+    text: "Native to South America",
+  },
+  {
+    id: 3,
+    img: "../../assets/images/animalsСards/gorila.png",
+    header:"Gorilas",
+    text: "Native to Congo",
+  },
+  {
+    id: 4,
+    img: "../../assets/images/animalsСards/lenivec.png" ,
+    header:"Two-toed Sloth",
+    text: "Mesoamerica, South America",
+  },
+  {
+      id: 5,
+      img: "../../assets/images/animalsСards/leop.png",
+      header:"cheetahs",
+      text: "Native to Africa",
+  },
+  {
+      id: 6,
+      img: "../../assets/images/animalsСards/pinguin.png",
+      header:"Penguins",
+      text: "Native to Antarctica",
+  }
+]
+let fragment1 = new DocumentFragment();
+let fragment2 = new DocumentFragment();
+let slider1 = document.querySelector(".animals_cards1");
+let slider2 = document.querySelector(".animals_cards2");
+next = document.querySelector(".arrow_right"),
+prev = document.querySelector(".arrow_left");
+
+function shuffle(array){
+  let currentIndex = array.length, randomIdex;
+  while (currentIndex  !==0){   //while there remain elements to shuffle
+    randomIdex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+    
+    // swap random with current
+    [array[currentIndex], array[randomIdex]] = [
+      array[randomIdex], array[currentIndex]
+    ];
+  }
+  return array;
+}
+let pets1 = shuffle(pets);
+let pets2 = shuffle(pets);
+console.log(pets1);
+console.log(pets2);
+
+for (let i = 0; i < pets1.length; i++) {  
+  let galeryItem=document.createElement('div')
+  let img = document.createElement('img');
+  img.append(pets1[i].img);
+  img.classList.add('galery_img');
+  img.setAttribute('src', pets1[i].src);
+  let header = document.createElement('p');
+  header.append(pets1[i].text);
+  let text = document.createElement('p');
+  text.append(pets1[i].text);
+  header.classList.add('galery_header');
+  text.classList.add('galery_text');
+  galeryItem.append(img, header, text);
+  galeryItem.classList.add('galery-item');
+  galeryItem.setAttribute('id', pets1[i].id);
+  fragment1.append(galeryItem);
+  
+  slider1.append(fragment1);
+}
+for (let i = 0; i < pets2.length; i++) { 
+  let galeryItem=document.createElement('div')
+  let img = document.createElement('img');
+  img.append(pets2[i].img);
+  let header = document.createElement('p');
+  header.append(pets2[i].text);
+  let text = document.createElement('p');
+  text.append(pets2[i].text);
+  img.classList.add('galery_img');
+  img.setAttribute('src', pets2[i].src);
+  header.classList.add('galery_header');
+  text.classList.add('galery_text');
+  galeryItem.append(img, header, text);
+  galeryItem.classList.add('galery-item');
+  galeryItem.setAttribute('id', pets2[i].id);
+  fragment2.append(galeryItem);
+  
+  slider2.append(fragment2);
+}
+
+next.addEventListener("click", shuffle(pets1));
+prev.addEventListener("click", shuffle(pets2));*/
