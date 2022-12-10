@@ -941,14 +941,15 @@
       top: 0;
       left: 0;
       width: 50%;
-      height: 50%;
+      height: 30%;
       padding: 15px;
       background: #E5E5E5;
       transform: translateX(-100%);
       transition: transform 0.5s;
       display: flex;
       flex-direction: column;
-      justify-content:left;
+      justify-content:space-between;
+      z-index: 1;
     }
     .menu.active {
       transform: translateX(0);
@@ -956,6 +957,8 @@
     }
     .menu a {
       color:#333B41;
+      align-self:baseline;
+      margin: 0px;
 
     }
 
